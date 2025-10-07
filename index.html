@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -35,6 +36,7 @@
   <div class="wrap">
     <header>
       <h1>DJ SHZ — Jump‑and‑Run <span class="badge up">UP!</span></h1>
+      
       <div class="controls">
         <div class="row">
           <button id="btnStart" class="btn primary">Start / Reset</button>
@@ -63,6 +65,7 @@
       Tipp: UP!-Power‑ups machen 4 s unverwundbar. Doppelsprung aktiv.
     </footer>
   </div>
+  
 
   <!-- Spotify Overlay -->
   <div id="spotifyOverlay" class="overlay" aria-hidden="false">
@@ -131,6 +134,7 @@
     const bgImg = new Image(); let bgReady=false; bgImg.onload=()=>bgReady=true; bgImg.src=builtInBG;
     const faceImg = new Image(); faceImg.onload=()=>{ player.faceImg=faceImg; player.faceReady=true; }; faceImg.src=builtInFace;
 
+    
     function getDifficulty(){
       const t = (performance.now() - sessionStart)/1000;
       const s = score;
@@ -165,6 +169,7 @@
       Object.assign(player,{ x:120,y:FLOOR_Y,vx:0,vy:0,onGround:true,jumpsLeft:2, invUntil:0 });
       obstacles=[]; powerups=[]; score=0; timeScale=1;
       speedEl.textContent = timeScale.toFixed(1)+'x';
+      
       statusEl.textContent = 'normal';
       sessionStart = performance.now();
       lastSpawn = lastUpSpawn = sessionStart;
@@ -199,6 +204,7 @@
       diffEl.textContent = d.toFixed(1);
       timeScale = 1 + (d-1)*0.6;
       speedEl.textContent = timeScale.toFixed(1)+'x';
+      
       statusEl.textContent = (performance.now() < player.invUntil) ? 'UNVERWUNDBAR' : 'normal';
 
       const accel = 900, maxvx = 300;
@@ -233,6 +239,7 @@
             gameOver(); break;
           }
         }
+        
       }
 
       for (let i=powerups.length-1; i>=0; i--){
@@ -267,6 +274,7 @@
 
     function drawMonster(o){
       const yTop = o.y - o.h;
+      
       c.fillStyle = o.type.color;
       roundRect(o.x, yTop, o.w, o.h, 10);
       c.fill();
@@ -378,5 +386,15 @@
     }
     requestAnimationFrame(loop);
   </script>
-</body>
+</
+    <!-- Meine Tracks auf Spotify -->
+  <section id="my-tracks" style="margin:20px auto 0; max-width:980px; padding:15px; background:var(--panel); border:1px solid var(--border); border-radius:14px; text-align:center; color:var(--fg);">
+    <h2 style="margin:0 0 12px 0; font-size:20px; font-weight:700;">Meine Tracks auf Spotify</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px;">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5Bs8yczdmz0kasMwUvb9nk?utm_source=generator" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2t33ZQOhsmIPqKM2Op68MB?utm_source=generator" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5CaeKgjtG6bL2boslZhTr3?utm_source=generator" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+  </section>
+body>
 </html>
