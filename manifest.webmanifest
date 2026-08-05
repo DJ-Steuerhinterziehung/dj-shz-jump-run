@@ -1,0 +1,52 @@
+{
+  "name": "T-POSE TURBO: UP! RUN",
+  "short_name": "T-POSE TURBO",
+  "description": "Neoniges Jump-and-Run mit T-POSE-Held und Spotify-Soundtrack.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "background_color": "#07080d",
+  "theme_color": "#d7ff2f",
+  "lang": "de-DE",
+  "categories": ["games", "music", "entertainment"],
+  "icons": [
+    {
+      "src": "assets/icons/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/app-icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Run starten",
+      "short_name": "Spielen",
+      "url": "./#play",
+      "icons": [
+        {
+          "src": "assets/icons/app-icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Tracks hören",
+      "short_name": "Tracks",
+      "url": "./#music"
+    }
+  ]
+}
